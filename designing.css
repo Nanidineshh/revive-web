@@ -1,7 +1,7 @@
 *{
     margin: 0;
     padding: 0;
-    
+    font-size: medium;
 }
 :root{
    --primary-color:linear-gradient(360deg,#370158 ,rgb(153, 6, 116));
@@ -17,7 +17,7 @@
     }
     .dark-theme{
         --primary-color:linear-gradient(360deg,#2e2d2d , #181818);
-        --background-color:linear-gradient(360deg,#2a2b2d , #383535);
+        --background-color:linear-gradient(360deg,#1f1f24 , #4f4949);
         --secondary-color:rgb(0, 0, 0);
         --third-color:yellow;
         --fourth-color:white;
@@ -82,7 +82,9 @@ nav ul li a{
 }
 .container p{
     color:white;
-    text-align-last: center;
+    position: relative;
+    flex-direction: column;
+    text-align:center;
     width:100%;
     padding:20px 5px 2px;
     justify-content: center;
@@ -90,6 +92,7 @@ nav ul li a{
     word-spacing: 0.5em;
     line-height: 1.5;
     height: 200px;
+    
     
     
     
@@ -111,13 +114,14 @@ nav ul li a{
     background-color: yellow;
     color:black;
     position: relative;
-   display:inline-flex;
+   display:inline-block;
+   flex-direction: column;
     justify-content:center;
     text-decoration: none; 
     border-radius: 10px;  
     padding:5px;
-    left:40%;
-    bottom: 8em;
+    left:35%;
+    bottom: 3em;
     margin-top: 20px;
     font-size:medium;
     
@@ -190,7 +194,7 @@ nav ul li a{
     text-align: center; 
     line-height: 1;
     word-spacing: 0.3em;
-    background-color:var(--background-color);
+    background:var(--background-color);
     color:var(--fourth-color);
 
 
@@ -225,21 +229,18 @@ nav ul li a{
 }
 .container2{
     position:relative;
-    background-color:var(--secondary-color);
+    background-color:var(--background-color);
     width: 100%;
-    height:auto;
-    display: flex;
+    height: 100%;
+    display:flex;
     justify-content: center;
-    flex-wrap: wrap;   
-
-     
     
 }
 .container2 .heading h3{
   color:var(--third-color);
   text-align: center;
   padding: 5%;
-  margin:5%;
+  margin:4%;
   
   
     
@@ -248,7 +249,7 @@ nav ul li a{
     color:var(--fourth-color);
     text-align: center;
     word-spacing: 0.5em;
-    padding: 5%;
+    padding: 10%;
     
     
 }
@@ -256,38 +257,35 @@ nav ul li a{
 .back{
     position:relative;
     width: 100%;
-    
-    display: flex;
+    display:flex;
     justify-content: center;
-    flex-wrap: wrap;
-    margin:auto;
-    padding: auto;
-    background-color:var(--secondary-color);
-    
+    background-color:var(--background-color);
+    margin: 0%;
 
 }
 
 .back .person{
-    width:250px;
+    width:190px;
+    height: auto;
     position: relative;
-    margin: 20px 20px;
-    padding: 50px 10px 20px 20px;
+    margin: 30px;
+    padding: 20px ;
     display: flex;
     flex-direction: column;
     box-shadow: 1px #e0e0e0cb;
-    transition: 0.3s ease-in-out;
+    
     border-radius: 10px;
     text-align: center; 
     font-size: medium;
     letter-spacing: 0.5;
-    height: 200px;
-    line-height: 1;
+    line-height: 1em;
     word-spacing: 0.7em;
     background:var(--primary-color);
     color: white;
       
     
 }
+
 span{
     color:yellow;
     text-align: right;
@@ -295,34 +293,50 @@ span{
 }
 
 .back .logo3{
-    border-radius:60%;
-    
+    border-radius:60% ;
+    border:5px solid white;
     position: relative;
     display: flex;
     left:25%;
-    margin-top: -27%;
-    border:2px solid white;
-    padding: 1px 1.5px 1px 1px;
+    margin-top: -80px;
     width: 50%;
     height: 50%;
+    margin-bottom: 20px;
 
-    padding: 1;
     
     
 }
-@media only screen and (min-width: 768px){
+@media only screen and (min-width: 620px){
+    
     .container .img{
         display:flex;
-        left:120%;
-        margin-left:45%;
-        margin-top:20px;
+        justify-content: right;
+        margin-left: 47%;
+        margin-top:10px;
+        position: relative;
     }
     .container p{
         display: flex;
         justify-content:left;
-        padding: 50px;
+        flex-direction: row;
         top: -50px;
-        left: 29px;
+        position: relative;
+        margin: 20px;
+        
         
     }
+    .back{
+        
+        flex-direction: row;
+    }
 }
+    @media only screen and (max-width: 480px){
+
+       
+       .back {
+        
+    
+          flex-direction: column;
+       }
+    }
+
